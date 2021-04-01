@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deer.dao.Set_CardDao">
+    <sql id="AllDisplayInfo">
+        sc.ID,sc.Card_ID card_ID,s.Name set_name,sc.start_time,sc.end_time
+    </sql>
+
+    <select id="queryAllInfoByCardID" resultType="set_CardDisplayInfo">
+        select <include refid="AllDisplayInfo"></include>
+        from set_card sc
+        join `set` s on sc.Set_ID=s.ID
+        where Card_ID=#{Card_ID}
+    </select>
+</mapper>

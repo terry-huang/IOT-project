@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deer.dao.UserDao">
+    <resultMap id="userResultMap" type="user">
+        <id column="ID" property="ID" />
+        <result column="Name" property="name" />
+        <result column="Password" property="password" />
+        <result column="Priority" property="priority" />
+        <result column="Company" property="company" />
+        <result column="Charge" property="charge" />
+        <result column="Realname" property="realName" />
+        <result column="IDnumber" property="IDnumber" />
+    </resultMap>
+
+    <sql id="userInfo">
+        ID,Name,Password,Priority,Company,Charge,Realname,IDnumber,QQ,Phone,StoreName,status
+    </sql>
+
+    <sql id="userEasyInfo">
+        ID,Name,Password,Priority,Charge,StoreName
+    </sql>
+
+    <insert id="insertAllUser">
+        insert
+        into user(Name,Password,Priority,Company,Charge,Realname,IDnumber,QQ,Phone,StoreName,status)
+        values(#{name},#{password},#{priority},#{company},#{charge},#{realName},#{IDnumber},#{QQ},#{Phone},#{storeName},#{status})
+    </insert>
+
+    <select id="queryOneUserId" resultType="integer">
+        select ID
+        from user
+        where Name=#{name} and Password=#{password}
+    </select>
+
+    <delete id="deleteOneUser">
+        delete
+        from user
+        where ID=#{ID}
+    </delete>
+
+    <select id="queryOneUserCharge" resultType="float" >
+        select Charge
+        from user
+        where ID=#{ID}
+    </select>
+
+    <select id="queryOneUserAllInfoByID" resultMap="userResultMap">
+        select <include refid="userInfo"></include>
+        from user
+        where ID=#{ID}
+    </select>
+
+    <update id="updateOneUserCharge">
+        update user
+        set Charge=#{Charge}
+        where ID=#{ID}
+    </update>
+
+    <select id="queryOneUserByName" resultMap="userResultMap">
+        select <include refid="userInfo"></include>
+        from user
+        where Name=#{name}
+    </select>
+
+    <update id="updateOneUserPassword">
+        update user
+        set Password=#{Password}
+        where ID=#{ID}
+    </update>
+
+    <select id="queryOneUserPriorityByID" resultType="Integer">
+        select Priority
+        from user
+        where ID=#{ID}
+    </select>
+
+    <select id="queryAllUserWithoutRoot" resultType="user">
+        select ID,Name
+        from user
+        where ID!=#{ID}
+    </select>
+
+    <select id="judgeNameIsExist" resultType="string">
+        select Name
+        from user
+        where Name=#{Name}
+    </select>
+
+    <select id="queryAllUserInfo" resultType="user">
+        select <include refid="userEasyInfo"></include>
+        from user
+    </select>
+
+    <select id="queryAllUserInfoByCondition" resultType="user">
+        select <include refid="userEasyInfo"></include>
+        from user
+        <where>
+            <if test="startID != '' and endID != ''">
+                and ID between #{startID} and #{endID}
+            </if>
+            <if test="startID == '' and endID != ''">
+                and ID $lt;=#{endID}
+            </if>
+            <if test="startID != '' and endID == ''">
+                and ID>=#{endID}
+            </if>
+            <if test="priority != '' and priority != null">
+                and Priority=#{priority}
+            </if>
+            <if test="charge == 0">
+                and Charge >= 0
+            </if>
+            <if test="charge == 1">
+                and Charge $lt; 0
+            </if>
+            <if test="storeName != '' and storeName != null">
+                and StoreName like CONCAT('%','${storeName}','%')
+            </if>
+        </where>
+        order by ID
+    </select>
+
+    <update id="updateOneUserAllInfo">
+        update user
+        set Name=#{name},Password=#{password},Priority=#{priority},Company=#{company},Charge=#{charge},
+            RealName=#{realName},IDnumber=#{IDnumber},QQ=#{QQ},Phone=#{Phone},StoreName=#{storeName},status=#{status}
+        where ID=#{ID}
+    </update>
+
+    <select id="queryUserWithNoProcessingTrade" resultType="user">
+        select distinct u.ID,u.Name
+        from user u
+        join trade t on u.ID=t.User_ID
+        where t.status=0 and t.type=0
+        and u.ID in
+        <foreach collection="list" item="user" open="(" close=")" separator=",">
+            #{user.ID}
+        </foreach>
+    </select>
+
+    <select id="queryOneUserIdByName" resultType="int">
+        select ID
+        from user
+        where Name=#{name}
+    </select>
+</mapper>

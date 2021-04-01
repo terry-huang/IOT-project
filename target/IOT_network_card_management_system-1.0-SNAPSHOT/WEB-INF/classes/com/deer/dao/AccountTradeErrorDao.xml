@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deer.dao.AccountTradeErrorDao">
+    <select id="queryAllError" resultType="accountTradeError">
+        select ID,trade_ID,time,processing_time
+        from accounttradeerror
+        where status=0
+    </select>
+
+    <insert id="insertErrorLog">
+        insert
+        into accounttradeerror(trade_ID,status,time)
+        values(#{trade_ID},0,#{time})
+    </insert>
+
+    <update id="updateErrorStatus">
+        update accounttradeerror
+        set status=1,processing_time=#{processing_time}
+        where ID=#{ID}
+    </update>
+    
+    <select id="queryAllDisplayInfo" resultType="accountTradeError">
+        select ID,trade_ID,time,processing_time,status
+        from accounttradeerror
+    </select>
+</mapper>

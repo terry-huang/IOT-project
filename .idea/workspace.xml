@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="IOT_network_card_management_system:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca5e607d-1d73-4ac0-99f0-f765ab74113b" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="IOT_network_card_management_system" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="mybatis-config" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="mybatisDao" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/deer/controller/CardController.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Java\maven\repository" />
+        <option name="mavenHome" value="D:/Java/maven/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\Java\maven\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="11" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1eGHNFWIUZ6HRN8dPSRbmPA4Jsl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3264368" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.deer.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\src\main\webapp" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\src\main\webapp\orderManagement" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\src\main\webapp\picture" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\target\IOT_network_card_management_system-1.0-SNAPSHOT\picture" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\src\main\webapp\picture" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\target\IOT_network_card_management_system-1.0-SNAPSHOT\picture" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\target\classes" />
+      <recent name="C:\Users\deer Terry\Desktop\IOT_network_card_management_system\target\IOT_network_card_management_system-1.0-SNAPSHOT" />
+      <recent name="C:\Users\ASUS\Documents\Tencent Files\1010883444\FileRecv\IOT_network_card_management_system\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.30" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="IOT_network_card_management_system:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/IOT_network_card_management_system" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_IOT_network_card_management_system_2" />
+        <option name="JNDI_PORT" value="1100" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="4328" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="IOT_network_card_management_system:war exploded" />
+          <artifact name="IOT_network_card_management_system:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.11885246" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="完成" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\deer Terry\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\deer Terry\Desktop\IOT_network_card_management_system" />
+          <option name="myCopyRoot" value="C:\Users\deer Terry\Desktop\IOT_network_card_management_system" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\deer Terry\Desktop\IOT_network_card_management_system" />
+          <option name="myCopyRoot" value="C:\Users\deer Terry\Desktop\IOT_network_card_management_system" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca5e607d-1d73-4ac0-99f0-f765ab74113b" name="默认更改列表" comment="" />
+      <created>1593940967828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593940967828</updated>
+      <workItem from="1593940972401" duration="2156000" />
+      <workItem from="1594086458180" duration="18916000" />
+      <workItem from="1594170082965" duration="10039000" />
+      <workItem from="1594196910849" duration="2250000" />
+      <workItem from="1594252720289" duration="2064000" />
+      <workItem from="1594281691797" duration="7418000" />
+      <workItem from="1594343568964" duration="11341000" />
+      <workItem from="1594361841820" duration="2441000" />
+      <workItem from="1594364315632" duration="3973000" />
+      <workItem from="1594435399872" duration="3682000" />
+      <workItem from="1594450064599" duration="2131000" />
+      <workItem from="1594515250156" duration="2282000" />
+      <workItem from="1594607684526" duration="9208000" />
+      <workItem from="1594626261264" duration="6423000" />
+      <workItem from="1594694289824" duration="17463000" />
+      <workItem from="1594778716397" duration="3016000" />
+      <workItem from="1594796501228" duration="885000" />
+      <workItem from="1594947812617" duration="5582000" />
+      <workItem from="1594965615968" duration="3000" />
+      <workItem from="1595056463083" duration="8035000" />
+      <workItem from="1595071346083" duration="3449000" />
+      <workItem from="1595126500666" duration="6151000" />
+      <workItem from="1595141413882" duration="9671000" />
+      <workItem from="1595161623962" duration="416000" />
+      <workItem from="1595296914556" duration="9553000" />
+      <workItem from="1595310297208" duration="13000" />
+      <workItem from="1595311747750" duration="4721000" />
+      <workItem from="1595338564821" duration="26000" />
+      <workItem from="1595382204331" duration="14261000" />
+      <workItem from="1595404690170" duration="1951000" />
+      <workItem from="1595406738480" duration="6714000" />
+      <workItem from="1595413643228" duration="93000" />
+      <workItem from="1595423130983" duration="2080000" />
+      <workItem from="1595470340032" duration="17193000" />
+      <workItem from="1595503388315" duration="143000" />
+      <workItem from="1595552994113" duration="13096000" />
+      <workItem from="1595571724297" duration="12810000" />
+      <workItem from="1595771273579" duration="431000" />
+      <workItem from="1595816374903" duration="1109000" />
+      <workItem from="1595817512814" duration="4871000" />
+      <workItem from="1595830568708" duration="14219000" />
+      <workItem from="1595900000080" duration="13479000" />
+      <workItem from="1595918075516" duration="12704000" />
+      <workItem from="1595938152903" duration="8454000" />
+      <workItem from="1595983338132" duration="13944000" />
+      <workItem from="1596004859068" duration="12317000" />
+      <workItem from="1596070187928" duration="3076000" />
+      <workItem from="1596073388693" duration="24346000" />
+      <workItem from="1596101909833" duration="49000" />
+      <workItem from="1596158765163" duration="6602000" />
+      <workItem from="1596167300355" duration="4826000" />
+      <workItem from="1596181790547" duration="780000" />
+      <workItem from="1596416130228" duration="506000" />
+      <workItem from="1596416865462" duration="23854000" />
+      <workItem from="1596503165842" duration="5862000" />
+      <workItem from="1596510529730" duration="3488000" />
+      <workItem from="1596522452081" duration="6740000" />
+      <workItem from="1596529267337" duration="5567000" />
+      <workItem from="1596545616609" duration="92000" />
+      <workItem from="1596589676612" duration="12148000" />
+      <workItem from="1596609132305" duration="7605000" />
+      <workItem from="1596617401010" duration="4261000" />
+      <workItem from="1596675605708" duration="11049000" />
+      <workItem from="1596694841510" duration="10265000" />
+      <workItem from="1596762320166" duration="10964000" />
+      <workItem from="1596782248216" duration="3317000" />
+      <workItem from="1596785612650" duration="5656000" />
+      <workItem from="1597024721166" duration="9083000" />
+      <workItem from="1597063009323" duration="1840000" />
+      <workItem from="1597110763052" duration="3923000" />
+      <workItem from="1597120026096" duration="47000" />
+      <workItem from="1597126233131" duration="9409000" />
+      <workItem from="1597136275931" duration="2825000" />
+      <workItem from="1597192681306" duration="9509000" />
+      <workItem from="1597214694625" duration="501000" />
+      <workItem from="1597216804818" duration="7239000" />
+      <workItem from="1597235876131" duration="392000" />
+      <workItem from="1597236294788" duration="357000" />
+      <workItem from="1597281487999" duration="9044000" />
+      <workItem from="1597300715968" duration="5528000" />
+      <workItem from="1597306381911" duration="2852000" />
+      <workItem from="1597327280520" duration="116000" />
+      <workItem from="1597327427534" duration="3102000" />
+      <workItem from="1597380557930" duration="3838000" />
+      <workItem from="1597626269761" duration="12269000" />
+      <workItem from="1597648980346" duration="2892000" />
+      <workItem from="1597651915000" duration="3453000" />
+      <workItem from="1597712022654" duration="9786000" />
+      <workItem from="1597730334727" duration="5570000" />
+      <workItem from="1597737357321" duration="5864000" />
+      <workItem from="1597799392111" duration="3925000" />
+      <workItem from="1597807309029" duration="2732000" />
+      <workItem from="1597823473982" duration="49000" />
+      <workItem from="1597829573769" duration="432000" />
+      <workItem from="1597891429030" duration="1384000" />
+      <workItem from="1597907740168" duration="2876000" />
+      <workItem from="1597971682144" duration="902000" />
+      <workItem from="1597974980889" duration="2782000" />
+      <workItem from="1597990460539" duration="641000" />
+      <workItem from="1597991193643" duration="1857000" />
+      <workItem from="1598248698706" duration="1669000" />
+      <workItem from="1598319555936" duration="2053000" />
+      <workItem from="1598323903531" duration="808000" />
+      <workItem from="1598327435312" duration="1438000" />
+      <workItem from="1598341685458" duration="2266000" />
+      <workItem from="1598408463499" duration="3176000" />
+      <workItem from="1598413880157" duration="13000" />
+      <workItem from="1598413914447" duration="5764000" />
+      <workItem from="1598427822743" duration="2609000" />
+      <workItem from="1598431470524" duration="644000" />
+      <workItem from="1598844713250" duration="45000" />
+      <workItem from="1599110241270" duration="1795000" />
+      <workItem from="1599440014030" duration="2374000" />
+      <workItem from="1599442761003" duration="151000" />
+      <workItem from="1599442949315" duration="4028000" />
+      <workItem from="1599447018267" duration="10686000" />
+      <workItem from="1599526982609" duration="2888000" />
+      <workItem from="1599664874091" duration="975000" />
+      <workItem from="1599707229300" duration="35000" />
+      <workItem from="1599740170713" duration="226000" />
+      <workItem from="1599742845010" duration="23000" />
+      <workItem from="1599742904180" duration="588000" />
+      <workItem from="1599743590679" duration="756000" />
+      <workItem from="1599991845204" duration="67000" />
+      <workItem from="1600477590453" duration="3756000" />
+      <workItem from="1600736277898" duration="470000" />
+      <workItem from="1600740171637" duration="889000" />
+      <workItem from="1600744679314" duration="12000" />
+      <workItem from="1600847150908" duration="442000" />
+      <workItem from="1600847931722" duration="39000" />
+      <workItem from="1601013050287" duration="18000" />
+      <workItem from="1601114453690" duration="865000" />
+      <workItem from="1601175508767" duration="4026000" />
+      <workItem from="1601186181802" duration="17000" />
+      <workItem from="1601186714091" duration="55000" />
+      <workItem from="1601187207907" duration="3807000" />
+      <workItem from="1601191360437" duration="716000" />
+      <workItem from="1601342883244" duration="940000" />
+      <workItem from="1601344105699" duration="50000" />
+      <workItem from="1601344210007" duration="625000" />
+      <workItem from="1601344972691" duration="232000" />
+      <workItem from="1601347850469" duration="2965000" />
+      <workItem from="1601448737595" duration="2447000" />
+      <workItem from="1601453622976" duration="427000" />
+      <workItem from="1601457638780" duration="468000" />
+      <workItem from="1602204740788" duration="3839000" />
+      <workItem from="1603347454931" duration="2795000" />
+      <workItem from="1604302428493" duration="270000" />
+      <workItem from="1604302837389" duration="287000" />
+      <workItem from="1604303165850" duration="126000" />
+      <workItem from="1604303322559" duration="473000" />
+      <workItem from="1604303820397" duration="1477000" />
+      <workItem from="1604305336432" duration="1150000" />
+      <workItem from="1604374661270" duration="620000" />
+      <workItem from="1604391632312" duration="1281000" />
+      <workItem from="1604475600863" duration="649000" />
+      <workItem from="1604491561060" duration="439000" />
+      <workItem from="1604564335195" duration="300000" />
+      <workItem from="1604630027269" duration="4229000" />
+      <workItem from="1607067360299" duration="2326000" />
+      <workItem from="1607070609422" duration="3954000" />
+      <workItem from="1607302737069" duration="169000" />
+      <workItem from="1608858133367" duration="1231000" />
+      <workItem from="1609319958474" duration="516000" />
+      <workItem from="1609375788861" duration="11000" />
+      <workItem from="1609397548341" duration="9000" />
+      <workItem from="1610438797742" duration="4601000" />
+      <workItem from="1610585360952" duration="1419000" />
+      <workItem from="1610933119805" duration="6367000" />
+      <workItem from="1611018629250" duration="6720000" />
+      <workItem from="1614566686981" duration="396000" />
+      <workItem from="1614736790551" duration="5931000" />
+      <workItem from="1615964456738" duration="1243000" />
+      <workItem from="1615986837382" duration="781000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1601343623171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601343623172</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1601343717784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601343717784</updated>
+    </task>
+    <task id="LOCAL-00003">
+      <created>1601343823168</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601343823168</updated>
+    </task>
+    <task id="LOCAL-00004">
+      <created>1601344153883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601344153883</updated>
+    </task>
+    <task id="LOCAL-00005">
+      <created>1601345202839</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601345202839</updated>
+    </task>
+    <task id="LOCAL-00006">
+      <created>1601347875057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601347875057</updated>
+    </task>
+    <task id="LOCAL-00007">
+      <created>1601348215338</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601348215338</updated>
+    </task>
+    <task id="LOCAL-00008">
+      <created>1604491894140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604491894140</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="148" y="68" width="1228" height="720" key="DiffContextDialog" timestamp="1607067724273">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="148" y="68" width="1228" height="720" key="DiffContextDialog/0.0.1536.864/1920.0.1366.768@0.0.1536.864" timestamp="1607067724273" />
+    <state x="549" y="127" key="FileChooserDialogImpl" timestamp="1614752566622">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="127" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1366.768@0.0.1536.864" timestamp="1614752566622" />
+    <state x="408" y="134" key="NewModule_or_Project.wizard" timestamp="1614752568355">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="408" y="134" key="NewModule_or_Project.wizard/0.0.1536.864/1920.0.1366.768@0.0.1536.864" timestamp="1614752568355" />
+    <state x="222" y="64" width="1178" height="736" key="SettingsEditor" timestamp="1607070767103">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="222" y="64" width="1178" height="736" key="SettingsEditor/0.0.1536.864/1920.0.1366.768@0.0.1536.864" timestamp="1607070767103" />
+  </component>
+</project>

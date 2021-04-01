@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deer.dao.CardDao">
+    <sql id="allInfo">
+        ID,Server,ICCID,User_ID,Set_ID,start_time,end_time,silent_time,charge_used,charge_current,cost,price,status,
+        IMEInumber,remark,business_number,silent_time,setStatus,flow_used,flow
+    </sql>
+
+    <sql id="allDisplayInfo">
+        c.ID ID,c.Server server,c.ICCID ICCID,u.StoreName user_storeName,s.Name set_name,c.start_time start_time,
+        c.end_time end_time,c.charge_used,c.charge_current,c.cost,c.price,c.status,c.IMEInumber,c.remark,
+        c.business_number,c.silent_time,c.setStatus,c.flow_used,c.flow
+    </sql>
+
+    <select id="queryCountCardByServer" resultType="Integer">
+        select count(ID)
+        from card
+        where Server=#{Server}
+        <if test="User_ID != null">
+            and User_ID=#{User_ID}
+        </if>
+    </select>
+
+    <select id="queryCountCardByStatus" resultType="Integer">
+        select count(*)
+        from card
+        where status=#{status}
+    </select>
+
+    <select id="queryAllInfoByServer" resultType="card">
+        select <include refid="allDisplayInfo"/>
+        from card
+        where Server=#{Server}
+        <if test="User_ID != null">and User_ID=#{User_ID}</if>
+    </select>
+
+    <select id="queryAllDisplayInfoByServer" resultType="cardDisplayInfo" >
+        select <include refid="allDisplayInfo"></include>
+        from card c
+        join user u on c.User_ID=u.ID
+        join `set` s on c.set_ID=s.ID
+        where c.Server=#{Server}
+        <if test="User_ID != null">
+            and c.User_ID=#{User_ID}
+        </if>
+        order by ICCID
+    </select>
+
+    <select id="queryAllInfoByCondition" resultType="card">
+        select <include refid="allInfo"></include>
+        from card c
+        join trade t on c.ID=t.Trade_ID
+        join user u on c.User_ID=u.ID
+        <where>
+            <if test="startICCID != null">
+                and c.ICCID between #{startICCID} and #{endICCID}
+            </if>
+            <if test="startBusinessNumber != 0 and endBusinessNumber == 0">
+                and c.Business_number >= #{startBusinessNumber}
+            </if>
+            <if test="startBusinessNumber == 0 and endBusinessNumber != 0">
+                and c.Business_number &lt;= #{endBusinessNumber}
+            </if>
+            <if test="startBusinessNumber != 0 and endBusinessNumber != 0">
+                and c.Business_number between #{startBusinessNumber} and #{endBusinessNumber}
+            </if>
+            <if test="tradeID != null">
+                and t.ID like %#{tradeID}%
+            </if>
+            <if test="userID != null">
+                and u.ID like %#{userID}%
+            </if>
+            <if test="IMEInumber != null">
+                and u.IMEInumber like %#{IMEInumber}%
+            </if>
+            <if test="remake != null">
+                and u.remake like %#{remake}%
+            </if>
+            <if test="server != null">
+                and u.server like #{server}
+            </if>
+            <if test="status != null">
+                and u.status like #{status}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryAllDisplayInfoByCondition" resultType="cardDisplayInfo">
+        select distinct <include refid="allDisplayInfo"></include>
+        from card c
+        <if test="select0 == 0 and input0 != null and input0 != ''">
+            join trade_card tc on tc.card_ID=c.ID
+            join trade t on t.ID=tc.trade_ID
+        </if>
+        join user u on c.User_ID=u.ID
+        join `set` s on c.Set_ID=s.ID
+        <where>
+            c.server=#{server}
+            <if test="userID != null and userID != ''">
+                and User_ID=#{userID}
+            </if>
+            <if test="startICCID != '' and endICCID != ''">
+                and c.ICCID between #{startICCID} and #{endICCID}
+            </if>
+            <if test="startICCID != '' and endICCID == ''">
+                and c.ICCID >= #{startICCID}
+            </if>
+            <if test="startICCID == '' and endICCID != ''">
+                and c.ICCID &lt;= #{endICCID}
+            </if>
+            <if test="select0 == 0 and input0 != null and input0 != ''">
+                and t.ID like CONCAT('%','${input0}','%' )
+            </if>
+            <if test="select0 == 1 and input0 != null and input0 != ''">
+                and u.StoreName like CONCAT('%','${input0}','%' )
+            </if>
+            <if test="select0 == 2 and input0 != null and input0 != ''">
+                and u.IMEInumber like CONCAT('%','${input0}','%' )
+            </if>
+            <if test="select0 == 3 and input0 != null and input0 != ''">
+                and c.remark like CONCAT('%','${input0}','%' )
+            </if>
+            <if test="select1 == 0 and input1 != null and input1 != ''">
+                and c.start_time like CONCAT('%','${input1}','%' )
+            </if>
+            <!--            <if test="status != null">
+                            and c.status=#{status}
+                        </if>-->
+        </where>
+        order by ICCID
+    </select>
+
+    <insert id="insertCard">
+        insert
+        into card(Server,ICCID,User_ID,start_time,end_time,charge_used,charge_current,cost,price,status,
+        business_number,flow_used,flow,Set_ID,setStatus)
+        values(#{server},#{ICCID},#{user_ID},#{start_time},#{end_time},0,0,#{cost},#{price},1,#{business_number},0,0,#{server}+4,1)
+    </insert>
+
+    <select id="queryCardPriceByArray" resultType="double">
+        select sum(price)
+        from card
+        where ICCID in
+        <foreach collection="array" item="arrayICCID" open="(" close=")" separator=",">
+            #{arrayICCID}
+        </foreach>
+    </select>
+
+    <select id="queryCardPriceByID" resultType="double">
+        select sum(price)
+        from card
+        where ID in
+        <foreach collection="list" item="ID" open="(" close=")" separator=",">
+            #{ID}
+        </foreach>
+    </select>
+
+    <update id="updateCardUser">
+        update card
+        set User_ID=#{User_ID}
+        where ICCID in
+        <foreach collection="arrayICCID" item="ICCID" open="(" close=")" separator=",">
+            #{ICCID}
+        </foreach>
+    </update>
+
+    <select id="queryUser_IDByICCIDArray" resultType="card">
+        select User_ID,ICCID
+        from card
+        where ICCID in
+        <foreach collection="array" item="arrayICCID" open="(" close=")" separator=",">
+            #{arrayICCID}
+        </foreach>
+    </select>
+
+    <select id="queryContinuousICCIDByICCID" resultType="string">
+        select ICCID
+        from card
+        <where>
+            <if test="frontICCID!=null and backICCID!=null">
+                and ICCID between #{frontICCID} and #{backICCID}
+            </if>
+            <if test="frontICCID!=null and backICCID==null">
+                and ICCID &gt;= '#{frontICCID}'
+            </if>
+            <if test="frontICCID==null and backICCID!=null">
+                and ICCID &lt;= '#{backICCID}'
+            </if>
+        </where>
+    </select>
+
+    <select id="queryIDByICCIDList" resultType="int">
+        select ID
+        from card
+        where ICCID in
+        <foreach collection="list" separator="," open="(" close=")" item="ICCID">
+            #{ICCID}
+        </foreach>
+    </select>
+
+    <select id="queryIDByICCIDArray" resultType="int">
+        select ID
+        from card
+        where ICCID in
+        <foreach collection="array" separator="," open="(" close=")" item="ICCID">
+            #{ICCID}
+        </foreach>
+    </select>
+
+    <update id="updateCardCurrentCharge">
+        update card
+        set charge_current=charge_current+#{charge_trade}
+        where ICCID in
+        <foreach collection="ICCIDList" separator="," open="(" close=")" item="ICCID">
+            #{ICCID}
+        </foreach>
+    </update>
+
+    <select id="checkCurrentChargeLessThan0" resultType="card">
+        select ID,ICCID,charge_current
+        from card
+        where charge_current &lt;0 and ICCID in
+        <foreach collection="list" item="ICCID" open="(" close=")" separator=",">
+            #{ICCID}
+        </foreach>
+    </select>
+
+    <select id="checkCurrentChargeHighThan0" resultType="string">
+        select ICCID
+        from card
+        where charge_current >=0 and ICCID in
+        <foreach collection="list" item="ICCID" open="(" close=")" separator=",">
+            #{ICCID}
+        </foreach>
+    </select>
+
+    <update id="updateOneCardUserID">
+        update card
+        set User_ID=#{User_ID}
+        where ICCID=#{ICCID}
+    </update>
+
+    <select id="queryCardByAmountAndUser_IDAndServer" resultType="int">
+        select ID
+        from card
+        where User_ID=#{User_ID} and Server=#{Server}
+        limit ${amount}
+    </select>
+
+    <update id="updateCardUser_IDByID">
+        update card
+        set User_ID=#{user_ID}
+        where ID in
+        <foreach collection="IDList" separator="," open="(" close=")" item="ID">
+            #{ID}
+        </foreach>
+    </update>
+
+    <select id="queryCostByID" resultType="float">
+        select sum(cost)
+        from card
+        where ID in
+        <foreach collection="list" separator="," open="(" close=")" item="ID">
+            #{ID}
+        </foreach>
+    </select>
+
+    <select id="queryPriceByID" resultType="float">
+        select sum(price)
+        from card
+        where ID in
+        <foreach collection="list" separator="," open="(" close=")" item="ID">
+            #{ID}
+        </foreach>
+    </select>
+
+    <select id="queryCardByTrade" resultType="card">
+        select c.ICCID,c.Business_number,c.User_ID,c.Set_ID
+        from card c
+        join trade_card tc on c.ID=tc.Card_ID
+        where tc.Trade_ID=#{Trade_ID}
+    </select>
+
+    <select id="queryAllDisplayAllInfoByID" resultType="cardDisplayInfo">
+        select <include refid="allDisplayInfo"></include>
+        from card c
+        join User u on c.User_ID=u.ID
+        join `Set` s on c.Set_ID=s.ID
+        where c.ID=#{ID}
+    </select>
+
+    <select id="judgeICCIDIsTrue" resultType="string">
+    select ICCID
+    from card
+    where ICCID = #{ICCID}
+    </select>
+
+    <select id="queryCardByServerOrderByPrice" resultType="card">
+        select price,count(*)
+        from card
+        where Server=#{Server} and User_ID=#{User_ID}
+        group by price
+        order by price
+    </select>
+
+    <select id="queryServerByICCID" resultType="int">
+        select Server
+        from card
+        where ICCID = #{ICCID}
+    </select>
+
+    <select id="judgeICCIDListIsExist" resultType="string">
+        select ICCID
+        from card
+        where ICCID in
+        <foreach collection="list" separator="," open="(" close=")" item="ICCID">
+            #{ICCID}
+        </foreach>
+    </select>
+
+    <update id="updateRemark">
+        update card
+        set remark=#{remark}
+        where ICCID in
+        <foreach collection="ICCIDList" item="ICCID" open="(" close=")" separator=",">
+            #{ICCID}
+        </foreach>
+    </update>
+
+    <select id="queryOneUserCard" resultType="int">
+        select count(ID)
+        from card
+        where User_ID=#{User_ID}
+    </select>
+
+    <select id="queryICCIDByServer" resultType="string">
+        select c.ICCID ICCID
+        from card c
+        join user u on c.User_ID=u.ID
+        join `set` s on c.Set_ID=s.ID
+        where c.Server=#{Server}
+        <if test="User_ID != null">
+            and c.User_ID=#{User_ID}
+        </if>
+        order by ICCID
+    </select>
+</mapper>
